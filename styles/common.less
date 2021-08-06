@@ -1,0 +1,85 @@
+@import 'variables.less';
+
+.break-word {
+  word-break: break-all;
+}
+
+.monospace {
+  font-family: "simplonmono-regular";
+}
+
+.button.is-btcbam {
+  border-color: transparent;
+  background-color: @btcbam;
+  color: white;
+
+  &:hover, .is-hovered {
+    background-color: darken(@btcbam, 3%);
+    color: white;
+  }
+
+  &:focus, .is-focused {
+    outline: none;
+    color: white;
+    &:not(:active) {
+      box-shadow: 0 0 0 0.125rem fade(@btcbam, 25%);
+    }
+  }
+
+  &:active, .is-actived {
+    outline: none;
+    background-color: darken(@btcbam, 5%);
+    color: white;
+  }
+
+  &.is-outlined {
+    border-color: @btcbam;
+    background-color: transparent;
+    color: @btcbam;
+    &:hover, .is-hovered {
+      border-color: @btcbam;
+      background-color: @btcbam;
+      color: white;
+    }
+  }
+
+  &.is-inverted {
+    background-color: white;
+    color: @btcbam;
+    &:hover, .is-hovered {
+      background-color: #f2f2f2;
+      color: white;
+    }
+  }
+
+  &.is-outlined.is-inverted {
+    border-color: white;
+    background-color: transparent;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: @btcbam;
+    }
+  }
+
+  &[disabled] {
+    border-color: transparent;
+    background-color: @btcbam;
+    box-shadow: none;
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.navbar-item:hover, a.navbar-link:hover, a.button:hover {
+  text-decoration: none;
+}
+/*
+
+.tabs li.is-active a {
+    border-bottom-color: #2e9ad0;
+    color: #2e9ad0;
+}
+*/
